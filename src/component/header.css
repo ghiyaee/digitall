@@ -1,0 +1,14 @@
+.header__container{
+    display: flex;
+    height: 60px;
+    background: black;
+    color: aliceblue;
+    align-items: center;
+
+}
+
+
+
+.header__searchbar{
+    flex:1
+}
