@@ -1,14 +1,66 @@
 .header__container{
     display: flex;
     height: 60px;
-    background: black;
+    background: rgb(27, 24, 24);
     color: aliceblue;
     align-items: center;
 
 }
-
-
+.header__logo{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.header__text{
+    margin: auto;
+    font-family:'Italianno';
+    font-size: 3.5rem;
+    margin-left: 10px;
+    color: tomato;
+}
 
 .header__searchbar{
-    flex:1
+    flex:1;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.header__search{
+    width:100%;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+}
+.icon__searchbar{
+    position: absolute;
+    font-size: larger;
+    top:6px;
+    right: 0;
+    color: tomato;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+  
+}
+.nav__item{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+}
+.nav__item__Sign,.nav__item__shop{
+   font-weight: bold;
+   font-size: 1.2rem;
+}
+.nav__itemLineTwo{
+    position: absolute;
+    right: 19px;
+    top: 10px;
+    width: 22px;
+    height: 22px;
+    background: rgb(233, 27, 27);
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
 }
