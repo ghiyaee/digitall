@@ -1,9 +1,11 @@
 .header__container{
     display: flex;
     height: 60px;
-    background: rgb(27, 24, 24);
+    background: rgb(56, 52, 52);
     color: aliceblue;
     align-items: center;
+    position: sticky;
+    top: 0;
 
 }
 .header__logo{
@@ -63,4 +65,4 @@
     border-radius: 50%;
     text-align: center;
     font-weight: bold;
-}
+} 
