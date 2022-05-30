@@ -1,8 +1,12 @@
 import "./header.css";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
       <div className="header__container">
+        <Link to="/" style={{margin:'20px'}}>
+          <i className="home big yellow icon"></i>
+        </Link>
         <div className="header__logo">
           <i className="mobile big icon" />
           <h2 className="header__text">Digi Shop</h2>
@@ -23,10 +27,13 @@ const Header = () => {
             <span className="nav__item__shop">Shop</span>
           </div>
           <div className="nav__item">
-            <span className="nav__itemLineOne">
-              <i className="shopping cart big icon"></i>
-            </span>
-            <span className="nav__itemLineTwo">10</span>
+            <Link to="/bk">
+              <span className="nav__itemLineOne">
+                <i className="shopping cart big icon yellow"></i>
+              </span>
+            </Link>
+
+            <span className="nav__itemLineTwo">{ }</span>
           </div>
         </div>
       </div>

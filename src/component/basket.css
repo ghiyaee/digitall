@@ -1,0 +1,17 @@
+.basket__container{
+    display: flex;
+}
+
+
+
+.basket__product{
+    flex: 1;
+    border:2px solid #eee;
+    margin: 10px;
+}
+
+
+.basket__price{
+     border:2px solid #eee;
+    margin: 10px;
+}
