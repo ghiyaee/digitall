@@ -1,15 +1,28 @@
+.basket__subtotal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .basket__container{
     display: flex;
 }
 
-
+.basket__trm{
+    margin-left: 10px;
+}
 
 .basket__product{
     flex: 1;
     border:2px solid #eee;
     margin: 10px;
+    display: flex;
+    width: 100%;
+    height: 160px;
 }
 
+.basket__titel{
+    margin-left: 30px;
+}
 
 .basket__price{
      border:2px solid #eee;

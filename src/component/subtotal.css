@@ -1,0 +1,20 @@
+.subtotal{
+    display: flex;
+    flex-direction: column;
+    padding:10px
+}
+.subtotal__price{
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    
+}
+.subtotal__price p{
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.subtotal__btn{
+    background: rgb(252, 191, 25);
+    font-weight: bold;
+}
