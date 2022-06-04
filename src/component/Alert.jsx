@@ -4,7 +4,7 @@ const Alert = ({ alert }) => {
 
   return (
     <>
-      <p className='hiden'>add to basket</p>
+      <p className={`${alert} ? 'hiden' : 'alert' `}>add to basket</p>
     </>
   );
 };

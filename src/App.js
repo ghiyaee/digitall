@@ -34,13 +34,13 @@ const App = () => {
   const [buy, setBuy] = useState([])
   let [total,setTotal]=useState(0)
   const [addBasket, setAddBasket] = useState(0)
-  const [alert,setAlert]=useState(true)
+  const [alert,setAlert]=useState(false)
   const addHandel = (item) => {
     console.log(item.price);
     setAddBasket(addBasket + 1)
     setBuy(buy.concat(item)) 
     setTotal(total += item.price)
-    setAlert(false)
+    setAlert(true)
   }
   const descHandel = (e) => {
     console.log(e.id);

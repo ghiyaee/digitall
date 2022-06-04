@@ -1,15 +1,6 @@
-.hiden{
-    position: absolute;
-    top: 100px;
-    right: 0px;
-    z-index:1;
-    padding:5px;
-    font-size: 1.3rem;
-    background: tomato;
-    transform: translateX(0px);
-    transition: all .5s ease-in-out;
-    width: 120px;
+.alert{
+    color: #000;
 }
-.active{
-    transform: translateX(0px);
+.hiden{
+    opacity: 0;
 }
