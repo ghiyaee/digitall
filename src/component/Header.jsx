@@ -1,11 +1,11 @@
 import "./header.css";
 import { Link } from "react-router-dom";
-const Header = () => {
+const Header = ({ item }) => {
   return (
     <>
       <div className="header__container">
-        <Link to="/" style={{margin:'20px'}}>
-          <i className="home big yellow icon"></i>
+        <Link to="/" style={{ margin: "20px" }}>
+          <i className="home big orange icon"></i>
         </Link>
         <div className="header__logo">
           <i className="mobile big icon" />
@@ -29,11 +29,11 @@ const Header = () => {
           <div className="nav__item">
             <Link to="/bk">
               <span className="nav__itemLineOne">
-                <i className="shopping cart big icon yellow"></i>
+                <i className="shopping cart big icon orange"></i>
               </span>
             </Link>
 
-            <span className="nav__itemLineTwo">{ }</span>
+            <span className="nav__itemLineTwo">{item}</span>
           </div>
         </div>
       </div>

@@ -1,24 +1,31 @@
+import React from "react";
 import "./checkOut.css"
-const CheckOut = ({id,imag,titel,price,star}) => {
+const CheckOut = ({ buy, desconut }) => {
+  const renderItem = buy.map((item) => {
     return (
-      <>
-        <div className="checkout__container">
-          <div className="checkout__info">
-            <p>{titel}</p>
+      <div className="checkout__container">
+        <div className="checkout__info">
+          <img src={item.imgs} alt="" />
+          <div>
+            <p>{item.titel}</p>
             <p>
               <small>$</small>
-              <strong>{price}</strong>
+              <strong>{item.price}</strong>
             </p>
-            {Array(star)
+            {Array(item.star)
               .fill()
               .map((_, i) => (
                 <i className="star yellow icon"></i>
               ))}
+            <button onClick={() => desconut(item)} className="checkout__buy">
+              Remove a Basket
+            </button>
           </div>
-          <button className="checkout__buy">Remove a Basket</button>
         </div>
-      </>
+      </div>
     );
-}
+  });
+  return <>{renderItem}</>;
+};
  
 export default CheckOut;

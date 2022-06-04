@@ -1,12 +1,12 @@
 import "./subtotal.css"
-const SubTotal = () => {
+const SubTotal = ({total}) => {
     return (
         <>
             <div className="subtotal">
                 <div className="subtotal__price">
                 <p>SubTotal :</p>
                 <small>$</small>
-                <strong>1000</strong>
+               <strong>{total}</strong>
                 </div>
                 <button className="subtotal__btn">Proceed CheckOut </button>
           </div>

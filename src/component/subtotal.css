@@ -1,13 +1,14 @@
 .subtotal{
     display: flex;
     flex-direction: column;
-    padding:10px
+    padding:10px;
+      background: rgb(231, 224, 224);
 }
 .subtotal__price{
     display: flex;
     margin: 10px;
     padding: 10px;
-    
+    font-size: 1.2rem;
 }
 .subtotal__price p{
     margin-right: 20px;
@@ -15,6 +16,12 @@
 }
 
 .subtotal__btn{
-    background: rgb(252, 191, 25);
+     background: tomato;
+    color: rgb(250, 248, 248);
+    margin-top: 15px;
+    border: 1px solid;
+    cursor: pointer;
     font-weight: bold;
+    padding: 5px 15px 5px 15px;
+    border-radius: 5px;
 }

@@ -19,11 +19,16 @@
 }
 .product__container > button{
     background: tomato;
-    color: black;
-    margin-top: 5px;
+    color: rgb(250, 248, 248);
+    margin-top: 15px;
     border: 1px solid;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 15px 5px 15px;
+    border-radius: 5px;
 }
 .product__info{
     height: 100px;
     text-align: center;
 }
+
