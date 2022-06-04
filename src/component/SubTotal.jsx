@@ -6,7 +6,7 @@ const SubTotal = ({total}) => {
                 <div className="subtotal__price">
                 <p>SubTotal :</p>
                 <small>$</small>
-               <strong>{total}</strong>
+                <strong>{total}</strong>
                 </div>
                 <button className="subtotal__btn">Proceed CheckOut </button>
           </div>
