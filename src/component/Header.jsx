@@ -1,5 +1,6 @@
 import "./header.css";
 import { Link } from "react-router-dom";
+
 const Header = ({ item }) => {
   return (
     <>
@@ -32,8 +33,8 @@ const Header = ({ item }) => {
                 <i className="shopping cart big icon orange"></i>
               </span>
             </Link>
-
             <span className="nav__itemLineTwo">{item}</span>
+          
           </div>
         </div>
       </div>

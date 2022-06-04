@@ -34,12 +34,13 @@ const App = () => {
   const [buy, setBuy] = useState([])
   let [total,setTotal]=useState(0)
   const [addBasket, setAddBasket] = useState(0)
-  
+  const [alert,setAlert]=useState(true)
   const addHandel = (item) => {
     console.log(item.price);
     setAddBasket(addBasket + 1)
     setBuy(buy.concat(item)) 
-    setTotal(total+=item.price)
+    setTotal(total += item.price)
+    setAlert(false)
   }
   const descHandel = (e) => {
     console.log(e.id);
@@ -53,7 +54,7 @@ const App = () => {
         <Router>
           <Header item={ addBasket}/>
           <Routes>
-            < Route path="/" element={<Home product={product} addItem={addHandel }/>}/>
+            < Route path="/" element={<Home product={product} addItem={addHandel} alert={alert }/>}/>
             < Route path="/bk" element={<Basket total={addBasket} buy={buy} sum={total} desconut={descHandel }/>}>
               <Route path="hr" element={<Header /> }/>
                </Route>
