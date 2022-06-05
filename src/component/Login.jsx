@@ -5,7 +5,7 @@ const Login = ({ login }) => {
   const [email, setImail] = useState("");
   const [password, setPassword] = useState("");
   const loginHandel = () => {
-    if (email && password === "") {
+    if (email=== '' || password === " ") {
       return;
     } else {
       login(password);
