@@ -20,7 +20,7 @@ const Header = ({ item }) => {
 
         <div className="navbar">
           <div className="nav__item">
-            <Link to='/lo'>
+            <Link to='/lo' className="nav__link">
               <span className="nav__itemLineOne">Hello User</span>
               <span className="nav__item__Sign">Sign In</span>
             </Link>

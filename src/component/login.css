@@ -22,9 +22,11 @@
 .login__sing p,button,input{
     padding: 10px;
     margin: 10px;
+    border-radius: 3px;
 }
 .login__sing button{
     border: none;
+    cursor: pointer;
 }
 .login__btn__sin{
     background: tomato;

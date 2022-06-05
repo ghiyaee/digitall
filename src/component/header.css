@@ -36,8 +36,8 @@
 .icon__searchbar{
     position: absolute;
     font-size: larger;
-    top:6px;
-    right: 0;
+    top:17px;
+    right: 8px;
     color: tomato;
 }
 .navbar{
@@ -50,6 +50,14 @@
     flex-direction: column;
     position: relative;
     padding: 20px;
+}
+.nav__link{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.nav__link:hover{
+    color: white;
 }
 .nav__item__Sign,.nav__item__shop{
    font-weight: bold;
