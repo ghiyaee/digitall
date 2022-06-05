@@ -36,25 +36,30 @@ const App = () => {
      
     },
   ]
+
+  //this products
   const [product, setProducts] = useState(products)
+
+  //this new list select buy
   const [buy, setBuy] = useState([])
-  let [total,setTotal]=useState(0)
+
+  //this sum buy
+  let [total, setTotal] = useState(0)
+  
+  //this counter buy
   const [addBasket, setAddBasket] = useState(0)
  
-  
+  //this is function add counter basket and new list buying and total price buying
   const addHandel = (item) => {
-    console.log(item);
     setAddBasket(addBasket + 1)
     setBuy(buy.concat(item)) 
     setTotal(total += item.price)
    
   }
-
+//this is function desCount basket and remove a list buying and desTotal price buying
   const descHandel = (e) => {
-    console.log(e.id);
     setAddBasket(addBasket <= 0 ? addBasket = 0 : addBasket - 1)
-    const des=buy.filter(item=> item.id != e.id)
-    setBuy(des)
+    setBuy(buy.filter(item => item.id != e.id))
     setTotal(total-=e.price)
   }
     return ( 
