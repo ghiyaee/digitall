@@ -24,7 +24,6 @@ const Products = ({ pro, items ,alert}) => {
           <button onClick={() => items(item)} className="product__buy">
             Buy
           </button>
-          <Alert alert={alert} />
         </div>
       </React.Fragment>
     );

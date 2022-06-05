@@ -34,7 +34,8 @@ const App = () => {
   const [buy, setBuy] = useState([])
   let [total,setTotal]=useState(0)
   const [addBasket, setAddBasket] = useState(0)
-  const [alert,setAlert]=useState(false)
+  const [alert, setAlert] = useState(false)
+  
   const addHandel = (item) => {
     console.log(item.price);
     setAddBasket(addBasket + 1)
@@ -42,6 +43,7 @@ const App = () => {
     setTotal(total += item.price)
     setAlert(true)
   }
+  
   const descHandel = (e) => {
     console.log(e.id);
     setAddBasket(addBasket <= 0 ? addBasket = 0 : addBasket - 1)
