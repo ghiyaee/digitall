@@ -1,12 +1,13 @@
 import CheckOut from "./CheckOut";
 import "./basket.css"
-// import img from "../assets/iphone-13-pro.jpg";
+import img from "../../src/download.png";
 import SubTotal from "./SubTotal";
 const Basket = ({ buy, sum, desconut }) => {
   return (
     <>
       <div className="basket__subtotal">
         <h2 className="basket__trm">Your Shopping Basket</h2>
+        <i class="shopping basket violet massive icon"></i>
         <div className="basket__price">
           <SubTotal total={sum} />
         </div>
