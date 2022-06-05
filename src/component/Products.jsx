@@ -1,9 +1,7 @@
 
 import React from "react";
 import "./products.css"
-import Alert from "./Alert";
-const Products = ({ pro, items ,alert}) => {
-  console.log(pro);
+const Products = ({ pro, items }) => {
   const renderList = pro.map((item) => {
     return (
       <React.Fragment key={item.id}>
@@ -22,7 +20,7 @@ const Products = ({ pro, items ,alert}) => {
               ))}
           </div>
           <button onClick={() => items(item)} className="product__buy">
-            Buy
+          {item.mess}
           </button>
         </div>
       </React.Fragment>
