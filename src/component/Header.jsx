@@ -1,7 +1,7 @@
 import "./header.css";
 import { Link } from "react-router-dom";
 
-const Header = ({ item }) => {
+const Header = ({ item,user }) => {
   return (
     <>
       <div className="header__container">
@@ -21,7 +21,7 @@ const Header = ({ item }) => {
         <div className="navbar">
           <div className="nav__item">
             <Link to='/lo' className="nav__link">
-              <span className="nav__itemLineOne">Hello User</span>
+              <span className="nav__itemLineOne">{user }</span>
               <span className="nav__item__Sign">Sign In</span>
             </Link>
           </div>
