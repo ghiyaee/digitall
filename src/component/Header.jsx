@@ -20,8 +20,10 @@ const Header = ({ item }) => {
 
         <div className="navbar">
           <div className="nav__item">
-            <span className="nav__itemLineOne">Hello User</span>
-            <span className="nav__item__Sign">Sign In</span>
+            <Link to='/lo'>
+              <span className="nav__itemLineOne">Hello User</span>
+              <span className="nav__item__Sign">Sign In</span>
+            </Link>
           </div>
           <div className="nav__item">
             <span className="nav__itemLineOne">Your</span>
@@ -34,7 +36,6 @@ const Header = ({ item }) => {
               </span>
             </Link>
             <span className="nav__itemLineTwo">{item}</span>
-          
           </div>
         </div>
       </div>

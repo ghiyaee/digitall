@@ -4,7 +4,8 @@ import Basket from "./component/Basket";
 import img from "../src/iphone-13-pro.jpg";
 import img1 from "../src/apple-iphone-13.jpg";
 import img2 from "../src/apple-iphone-12-pro-max.jpg";
-import { useState } from "react";
+import Login from "./component/Login";
+import { useState ,useReducer} from "react";
 import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
 const App = () => {
   const products = [
@@ -45,7 +46,7 @@ const App = () => {
 
   //this sum buy
   let [total, setTotal] = useState(0)
-  
+
   //this counter buy
   const [addBasket, setAddBasket] = useState(0)
  
@@ -70,7 +71,8 @@ const App = () => {
             < Route path="/" element={<Home product={product} addItem={addHandel} />}/>
             < Route path="/bk" element={<Basket total={addBasket} buy={buy} sum={total} desconut={descHandel }/>}>
               <Route path="hr" element={<Header /> }/>
-               </Route>
+            </Route>
+            <Route path="/lo" element={<Login/> }/>
           </Routes>
          </Router>
         </>
