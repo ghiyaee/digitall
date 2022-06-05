@@ -65,8 +65,8 @@ const App = () => {
     setBuy(buy.filter(item => item.id != e.id))
     setTotal(total-=e.price)
   }
-  const login = (e,p) => {
-    setUser(p)
+  const login = (user) => {
+    setUser(user)
   }
     return ( 
       <>

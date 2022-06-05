@@ -21,7 +21,7 @@ const Header = ({ item,user }) => {
         <div className="navbar">
           <div className="nav__item">
             <Link to='/lo' className="nav__link">
-              <span className="nav__itemLineOne">{user }</span>
+              <span className="nav__itemLineOne">{`welCome :  ${user}  `}</span>
               <span className="nav__item__Sign">Sign In</span>
             </Link>
           </div>
