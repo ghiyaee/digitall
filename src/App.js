@@ -49,6 +49,8 @@ const App = () => {
 
   //this counter buy
   const [addBasket, setAddBasket] = useState(0)
+
+  
  
   //this is function add counter basket and new list buying and total price buying
   const addHandel = (item) => {
@@ -63,16 +65,19 @@ const App = () => {
     setBuy(buy.filter(item => item.id != e.id))
     setTotal(total-=e.price)
   }
+  const login = (e,p) => {
+    console.log(e,p);
+  }
     return ( 
       <>
         <Router>
-          <Header item={ addBasket}/>
+          <Header item={ addBasket} />
           <Routes>
-            < Route path="/" element={<Home product={product} addItem={addHandel} />}/>
-            < Route path="/bk" element={<Basket total={addBasket} buy={buy} sum={total} desconut={descHandel }/>}>
+             <Route path="/" element={<Home product={product} addItem={addHandel} />}/>
+             <Route path="/bk" element={<Basket total={addBasket} buy={buy} sum={total} desconut={descHandel }/>}>
               <Route path="hr" element={<Header /> }/>
             </Route>
-            <Route path="/lo" element={<Login/> }/>
+            <Route path="/lo" element={<Login login={login }/> }/>
           </Routes>
          </Router>
         </>
