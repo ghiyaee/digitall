@@ -1,11 +1,11 @@
 import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import "./login.css";
 const Login = ({ login }) => {
   const onRef = useRef();
   const [email, setImail] = useState("");
   const [password, setPassword] = useState("");
   const [close, setClose] = useState(false);
-
   const loginHandel = () => {
     if (email === "" || password === " ") {
       return;
@@ -18,12 +18,15 @@ const Login = ({ login }) => {
   };
   return (
     <>
-      <div className={`login__container ${close} ? 'hiden' : '' `}>
+      <div className={`login__container `}>
         <div className="login__logo">
           <i className="mobile  big icon" />
           <h2 className="header__text">Digi Shop</h2>
         </div>
-        <div className="login__sing">
+        <div className="login__sign">
+          <Link to={'/'}>
+          <i className="close link large red icon "></i>
+          </Link>
           <input
             type="text"
             placeholder="E-mail"
