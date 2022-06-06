@@ -54,9 +54,14 @@ const App = () => {
  
   //this is function add counter basket and new list buying and total price buying
   const addHandel = (item) => {
-    setAddBasket(addBasket + 1)
-    setBuy(buy.concat(item)) 
-    setTotal(total += item.price)
+    if (user) {
+      setAddBasket(addBasket + 1)
+      setBuy(buy.concat(item)) 
+      setTotal(total += item.price)
+    } else {
+      return
+    }
+
    
   }
 //this is function desCount basket and remove a list buying and desTotal price buying
