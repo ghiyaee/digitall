@@ -5,8 +5,10 @@ const CheckOut = ({ buy, desconut }) => {
     return (
       <div className="checkout__container">
         <div className="checkout__info">
-          <img src={item.imgs} alt="" />
-          <div>
+          <div className="chechout__img">
+            <img src={item.imgs} alt="" />
+          </div>
+          <div className="checkout__titel">
             <p>{item.titel}</p>
             <p>
               <small>$</small>
@@ -18,7 +20,7 @@ const CheckOut = ({ buy, desconut }) => {
                 <i className="star yellow icon"></i>
               ))}
             <button onClick={() => desconut(item)} className="checkout__buy">
-              Remove a Basket
+              <i className="trash icon"></i>
             </button>
           </div>
         </div>
