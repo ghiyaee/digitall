@@ -46,6 +46,9 @@
     align-items: center;
   
 }
+.nav__user{
+    font-size: 1.2rem;
+}
 .nav__item{
     display: flex;
     flex-direction: column;

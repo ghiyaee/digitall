@@ -21,14 +21,14 @@ const Header = ({ item,user }) => {
         <div className="navbar">
           <div className="nav__item">
             <Link to='/lo' className="nav__link">
-              <span className="nav__itemLineOne">{`welCome :)  ${user}  `}</span>
+              <span className="nav__itemLineOne nav__user">{`welCome :)  ${user}  `}</span>
               <span className="nav__item__Sign">Sign In</span>
             </Link>
           </div>
-          <div className="nav__item">
+          {/* <div className="nav__item">
             <span className="nav__itemLineOne">Your</span>
             <span className="nav__item__shop">Shop</span>
-          </div>
+          </div> */}
           <div className="nav__item">
             <Link to="/bk">
               <span className="nav__itemLineOne">

@@ -29,11 +29,11 @@
   cursor: pointer;
   font-weight: bold;
   padding: 5px 15px 5px 15px;
-  border-radius: 2px;
+  border-radius: 7px;
   transition: all 0.5s ease-in-out;
   position: absolute;
-  top:50%;
-  right: -65px;
+  top:40px;
+  right: -80px;
 }
 .checkout__buy:hover {
   background: #fff;
