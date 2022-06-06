@@ -54,14 +54,9 @@ const App = () => {
  
   //this is function add counter basket and new list buying and total price buying
   const addHandel = (item) => {
-    if (user) {
-      setAddBasket(addBasket + 1)
-      setBuy(buy.concat(item)) 
-      setTotal(total += item.price)
-    } else {
-      return
-    }
-
+ setAddBasket(addBasket + 1)
+ setBuy(buy.concat(item))
+ setTotal(total += item.price)
    
   }
 //this is function desCount basket and remove a list buying and desTotal price buying
@@ -79,7 +74,7 @@ const App = () => {
           <Header item={addBasket} user={user }/>
           <Routes>
              <Route path="/" element={<Home product={product} addItem={addHandel} />}/>
-             <Route path="/bk" element={<Basket total={addBasket} buy={buy} sum={total} desconut={descHandel }/>}>
+            <Route path="/bk" element={<Basket total={addBasket} buy={buy} sum={total} desconut={descHandel} user={user } login={login }/>}>
               <Route path="hr" element={<Header /> }/>
             </Route>
             <Route path="/lo" element={<Login login={login }/> }/>

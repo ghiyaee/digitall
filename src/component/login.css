@@ -30,9 +30,9 @@
     margin: 10px;
     border-radius: 3px;
 }
-.login__sing button{
+.login__sign button{
     border: none;
-    cursor: pointer;
+    cursor: pointer ;
 }
 .login__btn__sin{
     background: tomato;
