@@ -4,18 +4,21 @@ const Login = ({ login }) => {
   const onRef = useRef();
   const [email, setImail] = useState("");
   const [password, setPassword] = useState("");
+  const [close, setClose] = useState(false);
+
   const loginHandel = () => {
-    if (email=== '' || password === " ") {
+    if (email === "" || password === " ") {
       return;
     } else {
       login(password);
       setImail("");
       setPassword("");
+      setClose(true);
     }
   };
   return (
     <>
-      <div className="login__container">
+      <div className={`login__container ${close} ? 'hiden' : '' `}>
         <div className="login__logo">
           <i className="mobile  big icon" />
           <h2 className="header__text">Digi Shop</h2>
