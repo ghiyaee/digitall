@@ -1,14 +1,14 @@
 .checkout__container {
-  width: 100%;
+  /* width: 100%; */
   background: rgb(231, 224, 224);
   padding: 15px;
   margin: 10px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   height: 120px;
   position: relative;
-  
+
 }
 .checkout__info {
   display: flex;
@@ -17,7 +17,7 @@
   justify-content: space-between;
 }
 .checkout__img {
- flex: 1;
+ /* flex: 1; */
 
 }
 .chechout__img img{
@@ -27,7 +27,7 @@
 .checkout__titel  {
   font-weight: bold;
   font-size: 1.1rem;
-  flex: 2;
+  /* flex: 2; */
 }
 .checkout__buy {
   background: tomato;
@@ -41,7 +41,7 @@
   height: 50px;
   transition: all 0.5s ease-in-out;
   position: absolute;
-  top:55px;
+  top:25px;
   right: 0px;
 }
 .checkout__buy:hover {

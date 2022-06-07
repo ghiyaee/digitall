@@ -7,6 +7,7 @@ import img2 from "../src/apple-iphone-12-pro-max.jpg";
 import Login from "./component/Login";
 import { useState ,useReducer} from "react";
 import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
+import Footer from "./component/Footer";
 const App = () => {
   const products = [
       {
@@ -75,7 +76,8 @@ const App = () => {
           <Routes>
              <Route path="/" element={<Home product={product} addItem={addHandel} />}/>
             <Route path="/bk" element={<Basket total={addBasket} buy={buy} sum={total} desconut={descHandel} user={user } login={login }/>}>
-              <Route path="hr" element={<Header /> }/>
+              <Route path="hr" element={<Header />} />
+               <Route path="ft" element={<Footer/> }/>
             </Route>
             <Route path="/lo" element={<Login login={login }/> }/>
           </Routes>

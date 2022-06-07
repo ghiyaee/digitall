@@ -1,15 +1,28 @@
 .subtotal{
     display: flex;
-    flex-direction: column;
-    padding:15px;
-     background: rgb(231, 224, 224);
+    align-items: center;
+    justify-content: space-between;
 
+}
+.subtotal__left{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+.basket__trm{
+   font-family:'Italianno' ;
+   font-size: 4.5rem;
+}
+.subtotal__right{
+    background: #eee;
+    margin: 20px;
 }
 .subtotal__price{
     display: flex;
     margin: 10px;
     padding: 10px;
     font-size: 1.2rem;
+
 }
 .subtotal__price p{
     margin-right: 20px;
