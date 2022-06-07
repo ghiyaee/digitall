@@ -47,7 +47,9 @@ const Login = ({ login }) => {
             Sign In
           </button>
           <p>By Useing && Buying Please a Create Account a Short Time</p>
+          <Link to='/rg'>
           <button className="login__btn__crt">Create Account</button>
+          </Link>
         </div>
       </div>
     </>

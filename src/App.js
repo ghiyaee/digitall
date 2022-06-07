@@ -8,6 +8,7 @@ import Login from "./component/Login";
 import { useState ,useReducer} from "react";
 import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
 import Footer from "./component/Footer";
+import Regester from "./component/Regester";
 const App = () => {
   const products = [
       {
@@ -52,6 +53,8 @@ const App = () => {
   const [addBasket, setAddBasket] = useState(0)
 
   const [user,setUser]=useState('')
+  const [pass, setPass] = useState('')
+  const [email,setEmail]=useState('')
  
   //this is function add counter basket and new list buying and total price buying
   const addHandel = (item) => {
@@ -67,19 +70,25 @@ const App = () => {
     setTotal(total-=e.price)
   }
   const login = (user) => {
+    setPass(user)
+  }
+  const regester = (user,pass,email) => {
     setUser(user)
+    setPass(pass)
+    setEmail(email)
   }
     return ( 
       <>
         <Router>
-          <Header item={addBasket} user={user }/>
+          <Header item={addBasket} pass={user }/>
           <Routes>
              <Route path="/" element={<Home product={product} addItem={addHandel} />}/>
             <Route path="/bk" element={<Basket total={addBasket} buy={buy} sum={total} desconut={descHandel} user={user } login={login }/>}>
               <Route path="hr" element={<Header />} />
                <Route path="ft" element={<Footer/> }/>
             </Route>
-            <Route path="/lo" element={<Login login={login }/> }/>
+            <Route path="/lo" element={<Login login={login} />} />
+            <Route path="/rg" element={<Regester reg={ regester}/> }/>
           </Routes>
          </Router>
         </>
