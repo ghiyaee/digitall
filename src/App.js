@@ -80,7 +80,7 @@ const App = () => {
     return ( 
       <>
         <Router>
-          <Header item={addBasket} pass={user }/>
+          <Header item={addBasket} user={user }/>
           <Routes>
              <Route path="/" element={<Home product={product} addItem={addHandel} />}/>
             <Route path="/bk" element={<Basket total={addBasket} buy={buy} sum={total} desconut={descHandel} user={user } login={login }/>}>
