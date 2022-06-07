@@ -1,0 +1,16 @@
+.social{
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+      background: rgb(105, 26, 185);
+      align-items: center;
+      color: white;
+  
+}
+.social span{
+    font-family: 'Italianno';
+    font-size: 4rem;
+}
+.social i{
+    cursor: pointer;
+}

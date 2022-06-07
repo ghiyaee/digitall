@@ -1,7 +1,7 @@
 import "./home.css";
 import imgbk from "../../src/imagebk.png";
 import Products from "./Products";
-
+import Footer from "./Footer";
 const Home = ({ product, addItem ,alert}) => {
   return (
     <div className="home">
@@ -18,6 +18,7 @@ const Home = ({ product, addItem ,alert}) => {
         <div className="home__row">
           <Products pro={product} items={addItem} alert={alert}/>
         </div>
+        <Footer/>
       </div>
     </div>
   );
