@@ -25,10 +25,6 @@ const Header = ({ item,user }) => {
               <span className="nav__item__Sign">Sign In</span>
             </Link>
           </div>
-          {/* <div className="nav__item">
-            <span className="nav__itemLineOne">Your</span>
-            <span className="nav__item__shop">Shop</span>
-          </div> */}
           <div className="nav__item">
             <Link to="/bk">
               <span className="nav__itemLineOne">
