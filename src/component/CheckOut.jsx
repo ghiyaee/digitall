@@ -1,6 +1,6 @@
 import React from "react";
 import "./checkOut.css"
-import Footer from "./Footer";
+
 const CheckOut = ({ buy, desconut }) => {
   const renderItem = buy.map((item) => {
     return (

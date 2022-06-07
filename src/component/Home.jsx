@@ -1,5 +1,5 @@
 import "./home.css";
-import imgbk from "../../src/imagebk.png";
+import imgbk from "../../src/img/imagebk.png";
 import Products from "./Products";
 import Footer from "./Footer";
 const Home = ({ product, addItem ,alert}) => {
