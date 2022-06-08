@@ -5,9 +5,6 @@ const Header = ({ item,user }) => {
   return (
     <>
       <div className="header__container">
-        <Link to="/" style={{ margin: "20px" }}>
-          <i className="home big orange icon"></i>
-        </Link>
         <div className="header__logo">
           <i className="mobile big icon" />
           <h2 className="header__text">Digi Shop</h2>
@@ -19,8 +16,11 @@ const Header = ({ item,user }) => {
         </div>
 
         <div className="navbar">
+            <Link to="/" style={{ margin: "20px" }}>
+              <i className="home big orange icon"></i>
+            </Link>
           <div className="nav__item">
-            <Link to='/lo' className="nav__link">
+            <Link to="/lo" className="nav__link">
               <span className="nav__itemLineOne nav__user">{`  ${user}  `}</span>
               <span className="nav__item__Sign">Sign In</span>
             </Link>

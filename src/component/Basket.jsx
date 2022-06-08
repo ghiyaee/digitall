@@ -6,7 +6,8 @@ import Login from "./Login";
 import Footer from "./Footer";
 
 const Basket = ({ buy, sum, desconut, user, login, total }) => {
-  if (user) {
+ const {active}=user
+  if (!active) {
     return (
       <>
         <div className="basket">
@@ -22,7 +23,7 @@ const Basket = ({ buy, sum, desconut, user, login, total }) => {
   } else {
     return (
       <>
-        <Login login={login} />
+        <Login login={login}/>
       </>
     );
   }

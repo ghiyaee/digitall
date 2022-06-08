@@ -40,6 +40,11 @@ const App = () => {
     },
   ]
 
+const  info =  { user: 'manoochehr',pass:1234,email:'ghiyaee@gmail.com' ,active:false}
+    
+    
+   const [infoU,setInfo]=useState(info)
+  
   //this products
   const [product, setProducts] = useState(products)
 
@@ -69,8 +74,8 @@ const App = () => {
     setBuy(buy.filter(item => item.id != e.id))
     setTotal(total-=e.price)
   }
-  const login = (user) => {
-    setPass(user)
+  const login = ( user ) => {
+    setUser(user)
   }
   const regester = (user,pass,email) => {
     setUser(user)
@@ -83,11 +88,11 @@ const App = () => {
           <Header item={addBasket} user={user }/>
           <Routes>
              <Route path="/" element={<Home product={product} addItem={addHandel} />}/>
-            <Route path="/bk" element={<Basket total={addBasket} buy={buy} sum={total} desconut={descHandel} user={user } login={login }/>}>
+            <Route path="/bk" element={<Basket total={addBasket} buy={buy} sum={total} desconut={descHandel} user={infoU} login={login }/>}>
               <Route path="hr" element={<Header />} />
                <Route path="ft" element={<Footer/> }/>
             </Route>
-            <Route path="/lo" element={<Login login={login} />} />
+            <Route path="/lo" element={<Login login={login} info={infoU }/>} />
             <Route path="/rg" element={<Regester reg={ regester}/> }/>
           </Routes>
          </Router>

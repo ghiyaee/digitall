@@ -1,21 +1,23 @@
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./login.css";
-const Login = ({ login }) => {
+const Login = ({ login, info }) => {
+  const {user,email,pass}=info
   const onRef = useRef();
-  const [email, setImail] = useState("");
+  const [emaill, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [close, setClose] = useState(false);
+
   const loginHandel = () => {
-    if (email === "" || password === " ") {
-      return;
-    } else {
-      login(password);
-      setImail("");
+    if (email == emaill &&  pass==password) {
+      login(user);
+      setEmail("");
       setPassword("");
       setClose(true);
+    } else {
+       return;
     }
-  };
+  }
   return (
     <>
       <div className={`login__container `}>
@@ -28,12 +30,12 @@ const Login = ({ login }) => {
           <i className="close link large red icon "></i>
           </Link>
           <input
-            type="text"
+            type="email"
             placeholder="E-mail"
             onChange={(e) => {
-              setImail(e.target.value);
+              setEmail(e.target.value);
             }}
-            value={email}
+            value={emaill}
           />
           <input
             type="text"
