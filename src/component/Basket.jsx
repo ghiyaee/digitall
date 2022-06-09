@@ -15,7 +15,7 @@ const Basket = ({ buy, sum, desconut, user, login, total }) => {
           <h2 className={`basket__empty ${sum === 0 ? "" : "hiden"}`}>
             Empty Your Basket
           </h2>
-          <CheckOut buy={buy} desconut={desconut} />    
+          <CheckOut buy={buy} desconut={desconut} />
         </div>
       </>
     );
