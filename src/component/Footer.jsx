@@ -7,9 +7,9 @@ const Footer = () => {
           <span>Contact Us</span>
         </div>
         <div>
-          <i class="telegram big icon"></i>
-          <i class="whatsapp big icon"></i>
-          <i class="instagram big  icon"></i>
+          <i className="telegram big icon"></i>
+          <i className="whatsapp big icon"></i>
+          <i className="instagram big  icon"></i>
         </div>
       </div>
     </>

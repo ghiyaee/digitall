@@ -90,7 +90,6 @@ const  info =  { user: 'manoochehr',pass:1234,email:'ghiyaee@gmail.com' ,active:
              <Route path="/" element={<Home product={product} addItem={addHandel} />}/>
             <Route path="/bk" element={<Basket total={addBasket} buy={buy} sum={total} desconut={descHandel} user={infoU} login={login }/>}>
               <Route path="hr" element={<Header />} />
-               <Route path="ft" element={<Footer/> }/>
             </Route>
             <Route path="/lo" element={<Login login={login} info={infoU }/>} />
             <Route path="/rg" element={<Regester reg={ regester}/> }/>

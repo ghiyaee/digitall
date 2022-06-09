@@ -1,19 +1,16 @@
-import { useState, useRef } from "react";
+import { useState} from "react";
 import { Link } from "react-router-dom";
 import "./login.css";
 const Login = ({ login, info }) => {
   const {user,email,pass}=info
-  const onRef = useRef();
   const [emaill, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [close, setClose] = useState(false);
 
   const loginHandel = () => {
     if (email == emaill &&  pass==password) {
       login(user);
       setEmail("");
       setPassword("");
-      setClose(true);
     } else {
        return;
     }
