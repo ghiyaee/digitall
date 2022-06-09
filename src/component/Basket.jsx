@@ -3,7 +3,7 @@ import "./basket.css";
 import img from "../../src/img/download.png";
 import SubTotal from "./SubTotal";
 import Login from "./Login";
-import Footer from "./Footer";
+
 
 const Basket = ({ buy, sum, desconut, user, login, total }) => {
  const {active}=user
@@ -15,8 +15,7 @@ const Basket = ({ buy, sum, desconut, user, login, total }) => {
           <h2 className={`basket__empty ${sum === 0 ? "" : "hiden"}`}>
             Empty Your Basket
           </h2>
-          <CheckOut buy={buy} desconut={desconut} />
-          <Footer />
+          <CheckOut buy={buy} desconut={desconut} />    
         </div>
       </>
     );
