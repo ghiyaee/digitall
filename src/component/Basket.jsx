@@ -7,7 +7,7 @@ import Login from "./Login";
 
 const Basket = ({ buy, sum, desconut, user, login, total }) => {
   console.log(user);
-  if (!user) {
+  if (user) {
     return (
       <>
         <div className="basket">
@@ -21,7 +21,9 @@ const Basket = ({ buy, sum, desconut, user, login, total }) => {
     )
   } else {
     return (
-      <><Login user={user }/></>
+      <>
+      <Login login={login} />
+      </>
     )
   }
 };
