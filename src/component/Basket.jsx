@@ -6,8 +6,8 @@ import Login from "./Login";
 
 
 const Basket = ({ buy, sum, desconut, user, login, total }) => {
-  console.log(user);
-  if (user) {
+
+
     return (
       <>
         <div className="basket">
@@ -15,17 +15,15 @@ const Basket = ({ buy, sum, desconut, user, login, total }) => {
           <h2 className={`basket__empty ${sum === 0 ? "" : "hiden"}`}>
             Empty Your Basket
           </h2>
+          <h2 className={`basket__empty ${user.active === false ? "" : "hiden"}`}>
+            Please a First All Login
+          </h2>
           <CheckOut buy={buy} desconut={desconut} />
         </div>
       </>
-    )
-  } else {
-    return (
-      <>
-      <Login login={login} />
-      </>
-    )
-  }
+    );
+  
+  
 };
 
 export default Basket;

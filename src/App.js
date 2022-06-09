@@ -42,7 +42,7 @@ const App = () => {
 
 const  info =  { user: 'manoochehr',pass:1234,email:'ghiyaee@gmail.com' ,active:false}
     
-    
+
    const [infoU,setInfo]=useState(info)
   
   //this products
@@ -74,8 +74,9 @@ const  info =  { user: 'manoochehr',pass:1234,email:'ghiyaee@gmail.com' ,active:
     setBuy(buy.filter(item => item.id != e.id))
     setTotal(total-=e.price)
   }
-  const login = ( user ) => {
+  const login = ( user,active ) => {
     setUser(user)
+    setInfo(active)
   }
   const regester = (user,pass,email) => {
     setUser(user)
@@ -88,7 +89,7 @@ const  info =  { user: 'manoochehr',pass:1234,email:'ghiyaee@gmail.com' ,active:
           <Header item={addBasket} user={user }/>
           <Routes>
              <Route path="/" element={<Home product={product} addItem={addHandel} />}/>
-            <Route path="/bk" element={<Basket total={addBasket} buy={buy} sum={total} desconut={descHandel} user={infoU} login={login }/>}>
+             <Route path="/bk" element={<Basket total={addBasket} buy={buy} sum={total} desconut={descHandel} user={infoU} login={login }/>}>
               <Route path="hr" element={<Header />} />
             </Route>
             <Route path="/lo" element={<Login login={login} info={infoU }/>} />

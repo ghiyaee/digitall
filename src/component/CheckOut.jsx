@@ -2,9 +2,9 @@ import React from "react";
 import "./checkOut.css"
 
 const CheckOut = ({ buy, desconut }) => {
-  const renderItem = buy.map((item) => {
+  const renderItem = buy.map((item,index) => {
     return (
-      <>
+      <React.Fragment key={index}>
         <div className="checkout__container">
           <div className="checkout__info">
             <div className="chechout__img">
@@ -27,7 +27,7 @@ const CheckOut = ({ buy, desconut }) => {
             </div>
           </div>
         </div>
-      </>
+      </React.Fragment>
     );
   });
   return (

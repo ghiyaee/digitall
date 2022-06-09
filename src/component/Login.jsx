@@ -2,13 +2,15 @@ import { useState} from "react";
 import { Link } from "react-router-dom";
 import "./login.css";
 const Login = ({ login, info }) => {
-  const {user,email,pass}=info
+  let { user, email, pass, active } = info
+  console.log(active);
   const [emaill, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const loginHandel = () => {
-    if (email == emaill &&  pass==password) {
-      login(user);
+    if (email == emaill && pass == password) {
+      active=true
+      login(user,active);
       setEmail("");
       setPassword("");
     } else {
