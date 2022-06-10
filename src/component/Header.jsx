@@ -1,7 +1,9 @@
 import "./header.css";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
+const Header = ({ item, user, searchValue }) => {
+  const onRef = useRef();
 
-const Header = ({ item,user }) => {
   return (
     <>
       <div className="header__container">
@@ -11,8 +13,10 @@ const Header = ({ item,user }) => {
         </div>
 
         <div className="header__searchbar">
-          <input type="text" className="header__search" />
-          <i className="search icon big  icon__searchbar"></i>
+          <input type="text" className="header__search" ref={onRef} />
+          <Link to="/sr">
+            <i className="search icon big  icon__searchbar" onClick={()=>  searchValue(onRef)}></i>
+          </Link>
         </div>
 
         <div className="navbar">

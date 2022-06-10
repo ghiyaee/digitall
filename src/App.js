@@ -9,6 +9,7 @@ import { useState ,useReducer} from "react";
 import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
 import Footer from "./component/Footer";
 import Regester from "./component/Regester";
+import SearchBar from "./component/SearchBar";
 const App = () => {
   const products = [
       {
@@ -42,7 +43,7 @@ const App = () => {
 
 const  info =  { user: 'manoochehr',pass:1234,email:'ghiyaee@gmail.com' ,active:false}
     
-
+ 
    const [infoU,setInfo]=useState(info)
   
   //this products
@@ -57,6 +58,7 @@ const  info =  { user: 'manoochehr',pass:1234,email:'ghiyaee@gmail.com' ,active:
   //this counter buy
   const [addBasket, setAddBasket] = useState(0)
 
+  const [value,setValue]=useState('')
   const [user,setUser]=useState('')
   const [pass, setPass] = useState('')
   const [email,setEmail]=useState('')
@@ -83,17 +85,21 @@ const  info =  { user: 'manoochehr',pass:1234,email:'ghiyaee@gmail.com' ,active:
     setPass(pass)
     setEmail(email)
   }
+  const searchValue = (value) => {
+   setValue(value.current.value);
+  }
     return ( 
       <>
         <Router>
-          <Header item={addBasket} user={user }/>
+          <Header item={addBasket} user={user} searchValue={searchValue }/>
           <Routes>
              <Route path="/" element={<Home product={product} addItem={addHandel} />}/>
              <Route path="/bk" element={<Basket total={addBasket} buy={buy} sum={total} desconut={descHandel} user={infoU} login={login }/>}>
               <Route path="hr" element={<Header />} />
             </Route>
             <Route path="/lo" element={<Login login={login} info={infoU }/>} />
-            <Route path="/rg" element={<Regester reg={ regester}/> }/>
+            <Route path="/rg" element={<Regester reg={regester} />} />
+            <Route path="/sr" element={<SearchBar product={product } searchValue={value }/> }/>
           </Routes>
          </Router>
         </>
