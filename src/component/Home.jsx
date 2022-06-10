@@ -13,7 +13,7 @@ const Home = ({ product, addItem ,alert}) => {
         </div>
         <div className="home__row">
           <Products pro={product} items={addItem} alert={alert}/>
-          <Products pro={product} items={addItem} alert={alert}/>
+          
         </div>
         <div className="home__row">
           <Products pro={product} items={addItem} alert={alert}/>

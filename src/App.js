@@ -4,6 +4,10 @@ import Basket from "./component/Basket";
 import img from "../src/img/iphone-13-pro.jpg";
 import img1 from "../src/img/apple-iphone-13.jpg";
 import img2 from "../src/img/apple-iphone-12-pro-max.jpg";
+import img3 from "../src/img/samsung a23.jpg";
+import img4 from "../src/img/samsung s20.jpg";
+import img5 from "../src/img/google p6.jpg";
+import img6 from "../src/img/xiaomi t11.jpg";
 import Login from "./component/Login";
 import { useState ,useReducer} from "react";
 import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
@@ -39,6 +43,42 @@ const App = () => {
       mess: 'Choice to buy',
      
     },
+     {
+       id: 4,
+       titel: ' samsung s20  128G',
+       price: 1800,
+       imgs: img4,
+       star: 4,
+       mess: 'Choice to buy',
+
+    },
+      {
+        id: 5,
+        titel: ' samsung a23  128G',
+        price: 1800,
+        imgs: img3,
+        star: 4,
+        mess: 'Choice to buy',
+
+    },
+       {
+         id: 6,
+         titel: ' google p6  128G',
+         price: 1800,
+         imgs: img5,
+         star: 4,
+         mess: 'Choice to buy',
+
+    },
+        {
+          id: 7,
+          titel: 'xiaomi t11  128G',
+          price: 1800,
+          imgs: img6,
+          star: 4,
+          mess: 'Choice to buy',
+
+        },
   ]
 
 const  info =  { user: 'manoochehr',pass:1234,email:'ghiyaee@gmail.com' ,active:false}
