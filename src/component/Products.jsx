@@ -4,7 +4,7 @@ import "./products.css"
 const Products = ({ pro, items }) => {
   const renderList = pro.map((item) => {
     return (
-      <React.Fragment key={item.id}>
+      <React.Fragment key={item}>
         <div className="product__container">
           <img src={item.imgs} alt="" className="product__img" />
           <div className="product__info">
