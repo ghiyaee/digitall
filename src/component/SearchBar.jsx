@@ -1,7 +1,7 @@
 import React from "react";
 import Products from "./Products";
 import "./searchbar.css"
-const SearchBar = ({ product, searchValue }) => {
+const SearchBar = ({ product, searchValue,addItem }) => {
     const filter = product.filter(fil => fil.titel.includes(searchValue))
    const renderList= filter.map(item => {
         return (
@@ -19,7 +19,7 @@ const SearchBar = ({ product, searchValue }) => {
                             <i className="star yellow icon"></i>
                         ))}
                 </div>
-                <button  className="product__buy">
+                <button onClick={()=> addItem(item)} className="product__buy">
                     {item.mess}
                 </button>
             </div>

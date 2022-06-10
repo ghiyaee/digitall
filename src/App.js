@@ -99,7 +99,7 @@ const  info =  { user: 'manoochehr',pass:1234,email:'ghiyaee@gmail.com' ,active:
             </Route>
             <Route path="/lo" element={<Login login={login} info={infoU }/>} />
             <Route path="/rg" element={<Regester reg={regester} />} />
-            <Route path="/sr" element={<SearchBar product={product } searchValue={value }/> }/>
+            <Route path="/sr" element={<SearchBar product={product} searchValue={value} addItem={addHandel }/> }/>
           </Routes>
          </Router>
         </>
