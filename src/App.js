@@ -108,7 +108,6 @@ const  info =  { user: 'manoochehr',pass:1234,email:'ghiyaee@gmail.com' ,active:
  setAddBasket(addBasket + 1)
  setBuy(buy.concat(item))
  setTotal(total += item.price)
-   
   }
 //this is function desCount basket and remove a list buying and desTotal price buying
   const descHandel = (e) => {
@@ -125,8 +124,9 @@ const  info =  { user: 'manoochehr',pass:1234,email:'ghiyaee@gmail.com' ,active:
     setPass(pass)
     setEmail(email)
   }
-  const searchValue = (value) => {
-   setValue(value.current.value);
+  const searchValue = (onRef) => {
+    setValue(onRef);
+ 
   }
     return ( 
       <>

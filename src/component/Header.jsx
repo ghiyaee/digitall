@@ -1,9 +1,13 @@
 import "./header.css";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
+import { logDOM } from "@testing-library/react";
 const Header = ({ item, user, searchValue }) => {
   const onRef = useRef();
-
+  const searchHandel = () => {
+  
+      searchValue(onRef.current.value)
+  }
   return (
     <>
       <div className="header__container">
@@ -15,7 +19,7 @@ const Header = ({ item, user, searchValue }) => {
         <div className="header__searchbar">
           <input type="text" className="header__search" ref={onRef} />
           <Link to="/sr">
-            <i className="search icon big  icon__searchbar" onClick={()=>  searchValue(onRef)}></i>
+            <i className="search icon big icon__searchbar" onClick={searchHandel}></i>
           </Link>
         </div>
 
