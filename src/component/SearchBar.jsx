@@ -6,7 +6,9 @@ const SearchBar = ({ product, searchValue, addItem }) => {
   let filter = '';
   let renderList='';
   if (searchValue) {
-    filter = product.filter((fil) => fil.titel.includes(searchValue));
+    filter = product.filter((fil) =>
+      fil.titel.includes(searchValue.toLowerCase())
+    );
       renderList = filter.map((item) => {
       return (
         <div className="product__container">
