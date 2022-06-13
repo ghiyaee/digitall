@@ -16,7 +16,7 @@ const Header = ({ item, user, searchValue }) => {
         </div>
 
         <div className="header__searchbar">
-          <input type="text" className="header__search" ref={onRef} />
+          <input type="text" className="header__search" ref={onRef}  />
           <Link to="/sr">
             <i className="search icon big icon__searchbar" onClick={searchHandel}></i>
           </Link>

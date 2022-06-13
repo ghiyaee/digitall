@@ -3,12 +3,11 @@ import { Link } from "react-router-dom";
 import "./login.css";
 const Login = ({ login, info }) => {
   let { user, email, pass, active } = info
-  console.log(active);
   const [emaill, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const loginHandel = () => {
-    if (email == emaill && pass == password) {
+    if (email == emaill.toLowerCase() && pass == password.toLowerCase()) {
       active=true
       login(user,active);
       setEmail("");
