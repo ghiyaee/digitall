@@ -21,7 +21,7 @@ const App = () => {
         titel: 'iphone 13 pro max 256G',
         price:3500,
         imgs:img,
-        star: 4,
+        star: 5,
         mess: 'Choice to buy',
       
     },
@@ -30,7 +30,7 @@ const App = () => {
       titel: ' iphone 13  128G',
       price: 2500,
       imgs: img1,
-      star: 3,
+      star: 4,
        mess: 'Choice to buy',
      
     },
@@ -48,7 +48,7 @@ const App = () => {
        titel: ' samsung s20  128G',
        price: 1800,
        imgs: img4,
-       star: 4,
+       star: 5,
        mess: 'Choice to buy',
 
     },
@@ -57,7 +57,7 @@ const App = () => {
         titel: ' samsung a23  128G',
         price: 1800,
         imgs: img3,
-        star: 4,
+        star: 3,
         mess: 'Choice to buy',
 
     },
@@ -75,7 +75,7 @@ const App = () => {
           titel: 'xiaomi t11  128G',
           price: 1800,
           imgs: img6,
-          star: 4,
+          star: 3,
           mess: 'Choice to buy',
 
         },
