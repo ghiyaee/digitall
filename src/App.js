@@ -126,7 +126,6 @@ const  info =  { user: 'manoochehr',pass:1234,email:'ghiyaee@gmail.com' ,active:
   }
   const searchValue = (onRef) => {
     setValue(onRef);
- 
   }
     return ( 
       <>

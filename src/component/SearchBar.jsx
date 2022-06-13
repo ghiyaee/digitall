@@ -1,10 +1,13 @@
 import React from "react";
 import Products from "./Products";
 import "./searchbar.css";
+
 const SearchBar = ({ product, searchValue, addItem }) => {
-   console.log(searchValue);
-    const filter = product.filter((fil) => fil.titel.includes(searchValue));
-    const renderList = filter.map((item) => {
+  let filter = '';
+  let renderList='';
+  if (searchValue) {
+    filter = product.filter((fil) => fil.titel.includes(searchValue));
+      renderList = filter.map((item) => {
       return (
         <div className="product__container">
           <img src={item.imgs} alt="" className="product__img" />
@@ -16,7 +19,7 @@ const SearchBar = ({ product, searchValue, addItem }) => {
             </p>
             {Array(item.star)
               .fill()
-              .map((_, i) => (
+              .map(() => (
                 <i className="star yellow icon"></i>
               ))}
           </div>
@@ -25,7 +28,18 @@ const SearchBar = ({ product, searchValue, addItem }) => {
           </button>
         </div>
       );
-    });
+    })
+  }
+  else {
+    return (
+      <>
+        <div className="searchbar__empty">
+          <i className="hand pointer big icon"></i>
+          <h2> SearchBar a Empty Please a Inter Name Product Favorite</h2>
+        </div>
+      </>
+    );
+   } 
   
   return (
     <>{renderList}</>

@@ -5,8 +5,8 @@ import { logDOM } from "@testing-library/react";
 const Header = ({ item, user, searchValue }) => {
   const onRef = useRef();
   const searchHandel = () => {
-  
-      searchValue(onRef.current.value)
+    searchValue(onRef.current.value)
+    console.log(onRef.current.value);
   }
   return (
     <>
