@@ -81,7 +81,7 @@ const App = () => {
         },
   ]
 
-const  info =  { user: 'manoochehr',pass:1234,email:'ghiyaee@gmail.com' ,active:false}
+const  info =  { user: 'user1',pass:1234,email:'user1@gmail.com' ,active:false}
     
  
    const [infoU,setInfo]=useState(info)

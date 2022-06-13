@@ -29,7 +29,7 @@ const Login = ({ login, info }) => {
           </Link>
           <input
             type="email"
-            placeholder="E-mail"
+            placeholder="E-mail  => default:user1@gmail.com"
             onChange={(e) => {
               setEmail(e.target.value);
             }}
@@ -37,7 +37,7 @@ const Login = ({ login, info }) => {
           />
           <input
             type="text"
-            placeholder="PassWord"
+            placeholder="PassWord => default:1234"
             onChange={(e) => {
               setPassword(e.target.value);
             }}
