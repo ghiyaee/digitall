@@ -6,6 +6,7 @@ const Header = ({ item, user, searchValue }) => {
   const onRef = useRef();
   const searchHandel = () => {
     searchValue(onRef.current.value)
+    onRef.current.value=''
   }
   return (
     <>
