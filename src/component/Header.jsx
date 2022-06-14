@@ -13,7 +13,9 @@ const Header = ({ item, user, searchValue }) => {
       <div className="header__container">
         <div className="header__logo">
           <i className="mobile big icon" />
+          <Link to='/'>
           <h2 className="header__text">Digi Shop</h2>
+          </Link>
         </div>
 
         <div className="header__searchbar">
