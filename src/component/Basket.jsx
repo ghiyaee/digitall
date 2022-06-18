@@ -17,7 +17,7 @@ const Basket = ({}) => {
         <div className="basket">
           <SubTotal />
           <div className={`basket__empty ${total === 0 ? "" : "hiden"}`}>
-            <img src={imgempt} alt="" />
+            <img className="basket__img" src={imgempt} alt="" />
           </div>
           {/* <h2 className={`basket__empty`}>
             Please a First All Login
