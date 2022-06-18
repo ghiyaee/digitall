@@ -1,7 +1,10 @@
 import "./regester.css"
 import { Link } from "react-router-dom";
 import { useState } from "react";
-const Regester = ({reg}) => {
+import { MyContext } from "../contaxt";
+import { useContext } from "react";
+const Regester = () => {
+  const {regesterHandel}=useContext(MyContext)
     const [user, setUser] = useState('');
     const [pass, setPass] = useState("");
     const [email, setEmail] = useState("");
@@ -9,7 +12,7 @@ const Regester = ({reg}) => {
         if (user === '' || pass === '' || email === '') {
             return
         } else {
-            reg(user, pass, email)
+            regesterHandel(user, pass, email);
             setUser('')
             setPass("");
             setEmail("");

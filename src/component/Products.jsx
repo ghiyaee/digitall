@@ -1,10 +1,12 @@
 
-import React from "react";
+import React, { useContext} from "react";
 import "./products.css"
-const Products = ({ pro, items }) => {
-  const renderList = pro.map((item) => {
+import { MyContext } from "../contaxt";
+const Products = () => {
+  const { product, addHandel } = useContext(MyContext);
+  const renderList = product.map((item) => {
     return (
-      <React.Fragment key={item}>
+      <React.Fragment key={item.id}>
         <div className="product__container">
           <img src={item.imgs} alt="" className="product__img" />
           <div className="product__info">
@@ -19,13 +21,17 @@ const Products = ({ pro, items }) => {
                 <i className="star yellow icon"></i>
               ))}
           </div>
-          <button onClick={() => items(item)} className="product__buy">
-          {item.mess}
+          <button onClick={() => addHandel(item)} className="product__buy">
+            {item.mess}
           </button>
         </div>
       </React.Fragment>
     );
   });
-  return <>{renderList}</>;
+  return(
+   <>
+    {renderList }
+    </>
+  )
 };
 export default Products;

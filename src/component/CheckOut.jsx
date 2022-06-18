@@ -1,7 +1,10 @@
 import React from "react";
 import "./checkOut.css"
-
-const CheckOut = ({ buy, desconut }) => {
+import { MyContext } from "../contaxt";
+import { useContext } from "react";
+const CheckOut = () => {
+  const { buy, descHandel } = useContext(MyContext);
+  console.log(buy);
   const renderItem = buy.map((item,index) => {
     return (
       <React.Fragment key={index}>
@@ -21,7 +24,7 @@ const CheckOut = ({ buy, desconut }) => {
                 .map((_, i) => (
                   <i className="star yellow icon"></i>
                 ))}
-              <button onClick={() => desconut(item)} className="checkout__buy">
+              <button onClick={() => descHandel(item)} className="checkout__buy">
                 <i className="trash icon"></i>
               </button>
             </div>

@@ -1,14 +1,15 @@
 import React from "react";
 import Products from "./Products";
 import "./searchbar.css";
-
-const SearchBar = ({ product, searchValue, addItem }) => {
+import { MyContext } from "../contaxt";
+import { useContext } from "react";
+const SearchBar = () => {
+  const { product, value, addItem } = useContext(MyContext)
   let filter = '';
   let renderList='';
-  if (searchValue) {
+  if (value) {
     filter = product.filter((fil) =>
-      fil.titel.includes(searchValue.toLowerCase())
-    );
+      fil.titel.includes(value.toLowerCase()))
       renderList = filter.map((item) => {
       return (
         <div className="product__container">

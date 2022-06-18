@@ -1,8 +1,10 @@
 import "./header.css";
 import { Link } from "react-router-dom";
-import { useRef } from "react";
+import { useRef ,useContext} from "react";
 import { logDOM } from "@testing-library/react";
-const Header = ({ item, user, searchValue }) => {
+import { MyContext } from "../contaxt/index";
+const Header = () => {
+  const {  addBasket,user,searchValue } = useContext(MyContext);
   const onRef = useRef();
   const searchHandel = () => {
     searchValue(onRef.current.value)
@@ -13,13 +15,13 @@ const Header = ({ item, user, searchValue }) => {
       <div className="header__container">
         <div className="header__logo">
           <i className="mobile big icon" />
-          <Link to='/'>
-          <h2 className="header__text">Digi Shop</h2>
+          <Link to="/">
+            <h2 className="header__text">Digi Shop</h2>
           </Link>
         </div>
 
         <div className="header__searchbar">
-          <input type="text" className="header__search" ref={onRef}  />
+          <input type="text" className="header__search" ref={onRef} />
           <Link to="/sr">
             <i className="search icon big icon__searchbar" onClick={searchHandel}></i>
           </Link>
@@ -41,7 +43,7 @@ const Header = ({ item, user, searchValue }) => {
                 <i className="shopping cart big icon inverted"></i>
               </span>
             </Link>
-            <span className="nav__itemLineTwo">{item}</span>
+            <span className="nav__itemLineTwo">{addBasket}</span>
           </div>
         </div>
       </div>

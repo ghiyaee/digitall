@@ -1,15 +1,18 @@
 import { useState} from "react";
 import { Link } from "react-router-dom";
 import "./login.css";
-const Login = ({ login, info }) => {
-  let { user, email, pass, active } = info
+import { MyContext } from "../contaxt";
+import { useContext } from "react";
+const Login = () => {
+  const {  infoU ,login} = useContext(MyContext);
+  const {user,email,pass,active}=infoU
   const [emaill, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const loginHandel = () => {
     if (email == emaill.toLowerCase() && pass == password.toLowerCase()) {
-      active=true
-      login(user,active);
+      // active=true
+      login(user, active);
       setEmail("");
       setPassword("");
     } else {
