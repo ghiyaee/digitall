@@ -6,11 +6,11 @@ import Login from "./Login";
 import imgempt from "../contaxt/img/imgempt.jpg";
 import { MyContext } from "../contaxt";
 import { useContext } from "react";
-const Basket = ({}) => {
-  const{  sum, user,total }=useContext(MyContext)
-  console.log(sum);
-  if (!user.active) {
-        <Login/>
+const Basket = () => {
+  const { user, infoU,total } = useContext(MyContext)
+  console.log(user)
+  if ('') {
+    return <Login  />
     }
     return (
       <>
@@ -19,9 +19,6 @@ const Basket = ({}) => {
           <div className={`basket__empty ${total === 0 ? "" : "hiden"}`}>
             <img className="basket__img" src={imgempt} alt="" />
           </div>
-          {/* <h2 className={`basket__empty`}>
-            Please a First All Login
-          </h2> */}
           <CheckOut />
         </div>
       </>

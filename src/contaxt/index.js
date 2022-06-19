@@ -76,7 +76,7 @@ const MyProvider = ({ children }) => {
     ]
     const [product, setProduct] = useState(products)
 
-    const info = {
+   const info = {
         user: 'user1',
         pass: 1234,
         email: 'user1@gmail.com',
@@ -115,6 +115,7 @@ const MyProvider = ({ children }) => {
     const login = (user, active) => {
         setUser(user)
         setInfo(active)
+        console.log(active);
     }
     const regesterHandel = (user, pass, email) => {
         setUser(user)

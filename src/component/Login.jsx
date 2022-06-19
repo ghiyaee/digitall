@@ -8,11 +8,11 @@ const Login = () => {
   const {user,email,pass,active}=infoU
   const [emaill, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+ 
   const loginHandel = () => {
     if (email == emaill.toLowerCase() && pass == password.toLowerCase()) {
-      // active=true
-      login(user, active);
+      
+      login(user,active);
       setEmail("");
       setPassword("");
     } else {

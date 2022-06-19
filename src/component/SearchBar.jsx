@@ -4,7 +4,7 @@ import "./searchbar.css";
 import { MyContext } from "../contaxt";
 import { useContext } from "react";
 const SearchBar = () => {
-  const { product, value, addItem } = useContext(MyContext)
+  const { product, value, addItem, addHandel } = useContext(MyContext);
   let filter = '';
   let renderList='';
   if (value) {
@@ -22,11 +22,11 @@ const SearchBar = () => {
             </p>
             {Array(item.star)
               .fill()
-              .map(() => (
-                <i className="star yellow icon"></i>
+              .map((_,i) => (
+                <i className="star yellow icon" key={i}></i>
               ))}
           </div>
-          <button onClick={() => addItem(item)} className="product__buy">
+          <button onClick={() => addHandel(item)} className="product__buy">
             {item.mess}
           </button>
         </div>
