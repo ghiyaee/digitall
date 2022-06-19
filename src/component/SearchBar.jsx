@@ -12,7 +12,7 @@ const SearchBar = () => {
       fil.titel.includes(value.toLowerCase()))
       renderList = filter.map((item) => {
       return (
-        <div className="product__container">
+        <div className="product__container" key={item.id}>
           <img src={item.imgs} alt="" className="product__img" />
           <div className="product__info">
             <p>{item.titel}</p>
