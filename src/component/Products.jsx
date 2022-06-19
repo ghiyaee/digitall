@@ -14,7 +14,7 @@ const Products = () => {
             <small>$</small>
             <strong>{item.price}</strong>
           </p>
-          {Array(item.star)
+          {Array(item.star).fill()
             .map((_,i) => (
               <i className="star yellow icon" key={i}></i>
               ))}
