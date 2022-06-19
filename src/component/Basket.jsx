@@ -8,7 +8,6 @@ import { MyContext } from "../contaxt";
 import { useContext } from "react";
 const Basket = () => {
   const { user, infoU,total } = useContext(MyContext)
-  console.log(user)
   if ('') {
     return <Login  />
     }

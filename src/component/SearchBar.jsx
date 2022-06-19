@@ -12,9 +12,9 @@ const SearchBar = () => {
       fil.titel.includes(value.toLowerCase()))
       renderList = filter.map((item) => {
       return (
-        <div className="product__container" key={item.id}>
-          <img src={item.imgs} alt="" className="product__img" />
-          <div className="product__info">
+        <div className="searchbar__container" key={item.id}>
+          <img src={item.imgs} alt="" className="searchbar__img" />
+          <div className="searchbar__info">
             <p>{item.titel}</p>
             <p>
               <small>$</small>
@@ -25,7 +25,7 @@ const SearchBar = () => {
                 <i className="star yellow icon" key={i}></i>
               ))}
           </div>
-          <button onClick={() => addHandel(item)} className="product__buy">
+          <button onClick={() => addHandel(item)} className="searchbar__buy">
             {item.mess}
           </button>
         </div>

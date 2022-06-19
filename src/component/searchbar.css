@@ -3,3 +3,42 @@
  margin-top: 4rem;
  color: rgb(173, 57, 36);
 }
+.searchbar__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 20px;
+  width: 100%;
+  max-height: 400px;
+  min-width: 100px;
+  z-index: 1;
+  background: rgb(248, 243, 243);
+}
+.searchbar__img {
+  max-height: 200px;
+  width: 100%;
+  object-fit: contain;
+  margin: 20px 0 0 15px;
+}
+.searchbar__container > button {
+  background: tomato;
+  color: rgb(250, 248, 248);
+  margin-top: 15px;
+  border: 1px solid;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px 15px 5px 15px;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+  font-size: 1.1rem;
+}
+.searchbar__container button:hover {
+  background: rgb(4, 0, 7);
+  color: tomato;
+}
+.searchbar__info {
+  height: 100px;
+  text-align: center;
+}

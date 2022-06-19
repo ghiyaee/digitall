@@ -124,7 +124,6 @@ const MyProvider = ({ children }) => {
     }
     const searchValue = (onRef) => {
         setValue(onRef);
-        console.log(onRef);
     }
 
     return (
