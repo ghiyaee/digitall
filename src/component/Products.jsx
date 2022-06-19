@@ -3,7 +3,6 @@ import "./products.css";
 import { MyContext } from "../contaxt";
 const Products = () => {
   const { product, addHandel } = useContext(MyContext);
-  console.log(product);
   const renderList = product.map((item) => {
     return (
       <div className="product__container" key={item.id}>

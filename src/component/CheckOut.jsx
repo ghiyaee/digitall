@@ -4,11 +4,10 @@ import { MyContext } from "../contaxt";
 import { useContext } from "react";
 const CheckOut = () => {
   const { buy, descHandel } = useContext(MyContext);
-  console.log(buy);
-  const renderItem = buy.map((item) => {
+  const renderItem = buy.map((item,index) => {
     return (
      
-        <div className="checkout__container" key={item.id}>
+        <div className="checkout__container" key={index}>
           <div className="checkout__info">
             <div className="chechout__img">
               <img src={item.imgs} alt="" />
@@ -25,7 +24,7 @@ const CheckOut = () => {
                   <i className="star yellow icon" key={i}></i>
                 ))}
               <button
-                onClick={() => descHandel(item)}
+                onClick={() => descHandel(item,index)}
                 className="checkout__buy"
               >
                 <i className="trash icon"></i>

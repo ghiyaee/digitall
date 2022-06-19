@@ -107,10 +107,10 @@ const MyProvider = ({ children }) => {
         setTotal(total += item.price)
     }
     //this is function desCount basket and remove a list buying and desTotal price buying
-    const descHandel = (e) => {
+    const descHandel = (item,e) => {
         setAddBasket(addBasket <= 0 ? addBasket = 0 : addBasket - 1)
-        setBuy(buy.filter(item => item.id != e.id))
-        setTotal(total -= e.price)
+        setBuy(buy.filter((item,index )=> index != e))
+        setTotal(total -= item.price)
     }
     const login = (user, active) => {
         setUser(user)
