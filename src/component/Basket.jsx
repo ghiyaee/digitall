@@ -6,6 +6,7 @@ import Login from "./Login";
 import imgempt from "../contaxt/img/imgempt.jpg";
 import { MyContext } from "../contaxt";
 import { useContext } from "react";
+import Footer from "./Footer";
 const Basket = () => {
   const { user, infoU,total } = useContext(MyContext)
   if ('') {
@@ -20,6 +21,7 @@ const Basket = () => {
           </div>
           <CheckOut />
         </div>
+        <Footer/>
       </>
     );
   
