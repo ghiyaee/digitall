@@ -11,9 +11,9 @@ const SubTotal = () => {
           </div>
           <div className="subtotal__right">
             <div className="subtotal__price">
-              <p>SubTotal: ({addBasket} )items</p>
-              <small>$</small>
-              <strong>{total}</strong>
+              <span>SubTotal: {addBasket} items</span>
+              <span> $</span>
+              <span>{total}</span>
             </div>
             <button className="subtotal__btn">Proceed CheckOut </button>
           </div>
