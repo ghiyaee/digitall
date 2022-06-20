@@ -5,11 +5,16 @@ import { logDOM } from "@testing-library/react";
 import { MyContext } from "../contaxt/index";
 const Header = () => {
   const {  addBasket,user,searchValue } = useContext(MyContext);
-  const onRef = useRef();
-  const searchHandel = () => {
-    searchValue(onRef.current.value)
-    onRef.current.value=''
+  const onRefTop = useRef();
+   const onRefBotttom = useRef();
+  const searchHandelTop = () => {
+    searchValue(onRefTop.current.value)
+    onRefTop.current.value=''
   }
+    const searchHandelBottom = () => {
+      searchValue(onRefBotttom.current.value);
+      onRefBotttom.current.value = "";
+    };
   return (
     <>
       <div className="positon">
@@ -22,11 +27,11 @@ const Header = () => {
           </div>
 
           <div className="header__searchbar ">
-            <input type="text" className="header__search" ref={onRef} />
+            <input type="text" className="header__search" ref={onRefTop} />
             <Link to="/sr">
               <i
                 className="search icon big icon__searchbar"
-                onClick={searchHandel}
+                onClick={searchHandelTop}
               ></i>
             </Link>
           </div>
@@ -52,11 +57,11 @@ const Header = () => {
           </div>
         </div>
         <div className="header__searchbar__bottom ">
-          <input type="text" className="header__search" ref={onRef} />
+          <input type="text" className="header__search" ref={onRefBotttom} />
           <Link to="/sr">
             <i
               className="search icon big icon__searchbar__bottom"
-              onClick={searchHandel}
+              onClick={searchHandelBottom}
             ></i>
           </Link>
         </div>
