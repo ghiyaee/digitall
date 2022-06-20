@@ -19,5 +19,7 @@
 @media (max-width:800px){
     .home__row{
         flex-wrap: wrap;
+        width: 250px;
+        margin: 0 auto;
     }
 }
