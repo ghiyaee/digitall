@@ -6,6 +6,7 @@ import Basket from "./component/Basket";
 import Login from "./component/Login";
 import Regester from "./component/Regester";
 import SearchBar from "./component/SearchBar";
+import "./app.css"
 const App = () => {
 
     return ( 
