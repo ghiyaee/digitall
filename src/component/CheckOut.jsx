@@ -4,7 +4,8 @@ import { MyContext } from "../contaxt";
 import { useContext } from "react";
 const CheckOut = () => {
   const { buy, descHandel } = useContext(MyContext);
-  const renderItem = buy.map((item,index) => {
+  const newlist = [...new Set(buy)];
+  const renderItem = newlist.map((item,index) => {
     return (
      
         <div className="checkout__container" key={index}>
