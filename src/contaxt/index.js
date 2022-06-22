@@ -17,7 +17,7 @@ const MyProvider = ({ children }) => {
         imgs: img,
         star: 5,
         mess: 'Choice to buy',
-
+        counter:0
     },
     {
         id: 2,
@@ -26,7 +26,7 @@ const MyProvider = ({ children }) => {
         imgs: img1,
         star: 4,
         mess: 'Choice to buy',
-
+       counter: 0
     },
     {
         id: 3,
@@ -35,7 +35,7 @@ const MyProvider = ({ children }) => {
         imgs: img2,
         star: 4,
         mess: 'Choice to buy',
-
+        counter: 0
     },
     {
         id: 4,
@@ -44,7 +44,7 @@ const MyProvider = ({ children }) => {
         imgs:  img4,
         star: 5,
         mess: 'Choice to buy',
-
+        counter: 0
     },
     {
         id: 5,
@@ -53,7 +53,7 @@ const MyProvider = ({ children }) => {
         imgs: img3,
         star: 3,
         mess: 'Choice to buy',
-
+        counter: 0
     },
     {
         id: 6,
@@ -62,7 +62,7 @@ const MyProvider = ({ children }) => {
         imgs:  img5,
         star: 4,
         mess: 'Choice to buy',
-
+         counter: 0
     },
     {
         id: 7,
@@ -71,37 +71,34 @@ const MyProvider = ({ children }) => {
         imgs: img6,
         star: 3,
         mess: 'Choice to buy',
-
+         counter: 1
     },
     ]
     const [product, setProduct] = useState(products)
-
    const info = {
         user: 'user1',
         pass: 1234,
         email: 'user1@gmail.com',
         active: false
     }
-
+   
+ 
 
     const [infoU, setInfo] = useState(info)
 
     //this new list select buy
     const [buy, setBuy] = useState([])
-
     //this sum buy
     let [total, setTotal] = useState(0)
 
     //this counter buy
     const [addBasket, setAddBasket] = useState(0)
-
     const [value, setValue] = useState('')
     const [user, setUser] = useState('')
     const [pass, setPass] = useState('')
     const [email, setEmail] = useState('')
-
     //this is function add counter basket and new list buying and total price buying
-    const addHandel = (item) => {
+    const addHandel = (item, index) => {
         setAddBasket(addBasket + 1)
         setBuy(buy.concat(item))
         setTotal(total += item.price)

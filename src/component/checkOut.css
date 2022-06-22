@@ -39,3 +39,18 @@
   background: #fff;
   color: tomato;
 }
+.ckeckout__add__sub{
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+.ckeckout__sum{
+  cursor: pointer;
+ width: 20px;
+ height: 20px;
+ background-color:tomato;
+ border-radius: 50%;
+ text-align: center;
+ color: white;
+}

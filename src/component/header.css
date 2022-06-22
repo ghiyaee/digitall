@@ -1,6 +1,6 @@
 .header__container{
     display: flex;
-    height: 60px;
+    height: 80px;
     background: rgb(105, 26, 185);
     color: aliceblue;
     align-items: center;
@@ -57,7 +57,7 @@
 .icon__searchbar__bottom{
     position: absolute;
     font-size: larger;
-    top:77px;
+    top:96px;
     right: 8px;
     color: tomato;
     
