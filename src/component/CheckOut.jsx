@@ -1,13 +1,12 @@
 import React from "react";
 import "./checkOut.css"
 import { MyContext } from "../contaxt";
-import { useContext,useState } from "react";
+import { useContext } from "react";
 const CheckOut = () => {
-  
+
   const { buy, descHandel, addHandel } = useContext(MyContext);
   const newlist=[...new Set(buy)]
   const renderItem = newlist.map((item, index) => {
-    console.log(item);
     return (
       <div className="checkout__container" key={index}>
         <div className="checkout__info">
@@ -21,9 +20,9 @@ const CheckOut = () => {
                 <small>$</small>
                 <strong>{item.price}</strong>
                 <div className="ckeckout__add__sub">
-                  <span className="ckeckout__sum" > + </span>
+                  {/* <span className="ckeckout__sum"  onClick={()=>addHandel}> + </span> */}
                   <span>items({item.counter})</span>
-                  <span className="ckeckout__sum">-</span>
+                  {/* <span className="ckeckout__sum">-</span> */}
                 </div>
               </div>
             </div>

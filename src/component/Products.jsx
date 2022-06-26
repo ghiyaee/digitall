@@ -4,7 +4,6 @@ import { MyContext } from "../contaxt";
 const Products = () => {
   const { product, addHandel } = useContext(MyContext);
   const renderList = product.map((item, index) => {
-    // console.log(index);
     return (
       <div className="product__container" key={item.id}>
         <img src={item.imgs} alt="" className="product__img" />
