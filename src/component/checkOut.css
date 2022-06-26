@@ -54,3 +54,14 @@
  text-align: center;
  color: white;
 }
+.checkout__items{
+  display: flex;
+  margin: 10px;
+  align-items: center;
+}
+.checkout__items .ckeckout__add__sub{
+  margin-left: 10px;
+}
+.ckeckout__add__sub span{
+  margin: 5px;
+}

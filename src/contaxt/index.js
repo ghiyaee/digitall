@@ -71,10 +71,11 @@ const MyProvider = ({ children }) => {
         imgs: img6,
         star: 3,
         mess: 'Choice to buy',
-         counter: 1
+        counter: 0
     },
     ]
     const [product, setProduct] = useState(products)
+    let [conter,setConter]=useState(0)
    const info = {
         user: 'user1',
         pass: 1234,
@@ -99,9 +100,11 @@ const MyProvider = ({ children }) => {
     const [email, setEmail] = useState('')
     //this is function add counter basket and new list buying and total price buying
     const addHandel = (item, index) => {
-        setAddBasket(addBasket + 1)
-        setBuy(buy.concat(item))
-        setTotal(total += item.price)
+        let newItem = item;
+        newItem.counter++
+        setAddBasket(addBasket + 1);
+        setBuy(buy.concat(newItem));
+        setTotal(total += item.price);
     }
     //this is function desCount basket and remove a list buying and desTotal price buying
     const descHandel = (item,e) => {
@@ -126,7 +129,7 @@ const MyProvider = ({ children }) => {
     return (
         < MyContext.Provider value={
             {
-               product, infoU, buy, total, addBasket, value, user, pass, email, addHandel, descHandel, login, regesterHandel, searchValue
+               product, infoU, buy, total, addBasket, value, user, pass, email,conter, addHandel, descHandel, login, regesterHandel, searchValue
             }
             
         } >
